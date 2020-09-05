@@ -43,9 +43,11 @@ body{
 
 .form input[type="text"]{
 
-    width: 20rem;
-    height: 3rem;
-    margin-bottom: 2rem;
+    width: 22rem;
+    height: 4.2rem;
+    margin-bottom: 1.1rem;
+    border-radius: .4rem;
+    border: none;
 
 }
 .form button[type="submit"]{
