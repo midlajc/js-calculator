@@ -38,6 +38,9 @@ body{
     margin-bottom:0;
     width: 4rem;
     height: 5rem;
+    font-weight: 1000;
+    font-size: 1.7rem;
+    border-radius: 1rem;
 
 }
 
@@ -48,11 +51,22 @@ body{
     margin-bottom: 1.1rem;
     border-radius: .4rem;
     border: none;
+    text-align: right;
+    font-size: 3rem;
+    font-weight: 1000;
+    color: black;
 
 }
-.form button[type="submit"]{
+#equel button[type="button"]{
 
     height: 21rem;
     width:4rem;
+
+}
+
+.form button[type="button"]:hover{
+
+    background:#a09d9d;
+    color: black;
 
 }
