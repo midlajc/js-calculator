@@ -1,6 +1,3 @@
-let displayVlaue=0
-let operatorActionCount=0   
-
 //button Click
 document.getElementById("one").addEventListener("click",oneClicked)
 document.getElementById("two").addEventListener("click",twoClicked)
@@ -157,24 +154,22 @@ function div(){
 
 function backSpace(){
 
-    let currentValue=document.getElementById("display").value
+    /*let currentValue=document.getElementById("display").value
     let strlen=currentValue.length
     console.log(strlen)
     currentValue=currentValue.replace(currentValue.charAt(strlen-1),"")
-    document.getElementById("display").value=currentValue
+    document.getElementById("display").value=currentValue*/
+    alert(" Not working\nwill be fixed 😁")
 }
 
 function allClear(){
 
     document.getElementById("display").value = ""
-    displayVlaue=""
-    operator=""
-    operatorActionCount=0
     document.getElementById("dot").disabled = false
 
 }
 
-
+//calculate
 
 function calculate(){
 
