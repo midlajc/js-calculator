@@ -24,7 +24,7 @@ document.getElementById("div").addEventListener("click",div)
 //clear click
 
 document.getElementById("aclear").addEventListener("click",allClear)
-document.getElementById("backSpacer").addEventListener("click",backSpace)
+document.getElementById("backSpace").addEventListener("click",backSpace)
 
 //button click action
 
@@ -158,9 +158,10 @@ function div(){
 function backSpace(){
 
     let currentValue=document.getElementById("display").value
-    
-    
-
+    let strlen=currentValue.length
+    console.log(strlen)
+    currentValue=currentValue.replace(currentValue.charAt(strlen-1),"")
+    document.getElementById("display").value=currentValue
 }
 
 function allClear(){
