@@ -159,7 +159,7 @@ function backSpace(){
     console.log(strlen)
     currentValue=currentValue.replace(currentValue.charAt(strlen-1),"")
     document.getElementById("display").value=currentValue*/
-    alert(" Not working\nwill be fixed 😁")
+    alert("      Not working\nwill be fixed soon 😁")
 }
 
 function allClear(){
