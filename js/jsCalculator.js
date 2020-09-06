@@ -1,10 +1,7 @@
-let displayVlaue
-let operator
+let displayVlaue=0
 let operatorActionCount=0   
 
 //button Click
-document.getElementById("clear").addEventListener("click",clear)
-document.getElementById("clear").addEventListener("click",clear)
 document.getElementById("one").addEventListener("click",oneClicked)
 document.getElementById("two").addEventListener("click",twoClicked)
 document.getElementById("three").addEventListener("click",threeClicked)
@@ -24,15 +21,12 @@ document.getElementById("sub").addEventListener("click",sub)
 document.getElementById("mul").addEventListener("click",mul)
 document.getElementById("div").addEventListener("click",div)
 
+//clear click
+
+document.getElementById("aclear").addEventListener("click",allClear)
+document.getElementById("backSpacer").addEventListener("click",backSpace)
+
 //button click action
-
-function oneClicked(){
-
-    let oldVlaue=document.getElementById("display").value
-    let newValue=oldVlaue+"1"
-    document.getElementById("display").value=newValue
-
-}
 
 function oneClicked(){
 
@@ -127,76 +121,65 @@ function dotClicked(){
 
 function add(){
 
-    if(operatorActionCount>1){
-        displayVlaue=Number(document.getElementById("dispaly").value)
-        document.getElementById("display").value = "0"
-        operatorActionCount=1
-        operator="+"
-    }else{
-        let currentValue=Number(document.getElementById("display").value)
-        displayVlaue=displayVlaue+currentValue
-        document.getElementById("display").value = "0"
-        document.getElementById("display").value=displayVlaue
-        operator="+"
-    }
+    let oldVlaue=document.getElementById("display").value
+    let newValue=oldVlaue+"+"
+    document.getElementById("display").value=newValue
+    document.getElementById("dot").disabled=false
 }
 
 function sub(){
 
-    if(operatorActionCount>1){
-        displayVlaue=Number(document.getElementById("dispaly").value)
-        document.getElementById("display").value = ""
-        operatorActionCount=1
-        operator="-"
-    }else{
-        displayVlaue=displayVlaue-Number(document.getElementById("display").value)
-        document.getElementById("display").value=displayVlaue
-        operator="-"
-    }
+    let oldVlaue=document.getElementById("display").value
+    let newValue=oldVlaue+"-"
+    document.getElementById("display").value=newValue
+    document.getElementById("dot").disabled=false
  
 }
 
 function div(){
 
-    if(operatorActionCount>1){
-        displayVlaue=Number(document.getElementById("dispaly").value)
-        document.getElementById("display").value = ""
-        operatorActionCount=1
-        operator="/"
-    }else{
-        displayVlaue=displayVlaue/Number(document.getElementById("display").value)
-        document.getElementById("display").value=displayVlaue
-        operator="/"
-    }
+    let oldVlaue=document.getElementById("display").value
+    let newValue=oldVlaue+"/"
+    document.getElementById("display").value=newValue
+    document.getElementById("dot").disabled=false
  
  }
 
  function mul(){
 
-    if(operatorActionCount>1){
-        displayVlaue=Number(document.getElementById("dispaly").value)
-        document.getElementById("display").value = ""
-        operatorActionCount=1
-        operator="*"
-    }else{
-        displayVlaue=displayVlaue*Number(document.getElementById("display").value)
-        document.getElementById("display").value=displayVlaue
-        operator="*"
-    }
- 
+    let oldVlaue=document.getElementById("display").value
+    let newValue=oldVlaue+"*"
+    document.getElementById("display").value=newValue
+    document.getElementById("dot").disabled=false
  } 
 
 //clear button action
 
-function clear(){
+function backSpace(){
+
+    let currentValue=document.getElementById("display").value
+    
+    
+
+}
+
+function allClear(){
 
     document.getElementById("display").value = ""
     displayVlaue=""
     operator=""
-    operatorActionCount=
+    operatorActionCount=0
     document.getElementById("dot").disabled = false
 
 }
 
 
 
+function calculate(){
+
+    let displayVlaue=document.getElementById("display").value
+    let result=eval(displayVlaue)
+    document.getElementById("display").value = result
+    document.getElementById("dot").disabled = false
+
+}

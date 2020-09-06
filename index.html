@@ -11,19 +11,20 @@
     <div class="calculator-box">
     <form class="form" action="">
         <table class="table-align">
-            <tr><th colspan="5"><input type="text" id="display"></th></tr>
+            <tr><th colspan="5"><input type="text" id="display" value="" disabled></th></tr>
             <tr>
             <td><button type="button" id="seven">7</button></td>
             <td><button type="button" id="eight">8</button></td>
             <td><button type="button" id="nine">9</button></td>
             <td><button type="button" id="div">/</button></td>
-            <td rowspan="4"><button id="equel" onclick="" style="height: 21rem;background-color: white; color: black;" type="button">=</button></td>
+            <td><button type="button" id="aclear">AC</button></td>
             </tr>
             <tr>
                 <td><button type="button" id="four">4</button></td>
                 <td><button type="button" id="five">5</button></td>
                 <td><button type="button" id="six">6</button></td>
                 <td><button type="button" id="mul">x</button></td>
+                <td rowspan="3"><button id="equel" onclick="calculate()" style="height: 15rem;background-color: white; color: black;" type="button">=</button></td>
             </tr>
             <tr>
                 <td><button type="button" id="one">1</button></td>
@@ -34,7 +35,7 @@
             <tr>
                 <td><button type="button" id="zero">0</button></td>
                 <td><button type="button" id="dot">.</button></td>
-                <td><button type="button" id="clear">c</button></td>
+                <td><button type="button" id="backSpace">&larr;</button></td>
                 <td><button type="button" id="add">+</button></td>
             </tr>      
         </table>
