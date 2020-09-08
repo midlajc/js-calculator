@@ -154,12 +154,12 @@ function div(){
 
 function backSpace(){
 
-    /*let currentValue=document.getElementById("display").value
-    let strlen=currentValue.length
-    console.log(strlen)
-    currentValue=currentValue.replace(currentValue.charAt(strlen-1),"")
-    document.getElementById("display").value=currentValue*/
-    alert("      Not working\nwill be fixed soon 😁")
+    let currentValue=document.getElementById("display").value
+    strrev=reverse(currentValue)
+    strrev=strrev.replace(strrev.charAt(0),"")
+    currentValue=reverse(strrev)
+    document.getElementById("display").value=currentValue
+    /*alert("      Not working\nwill be fixed soon 😁")*/
 }
 
 function allClear(){
@@ -178,4 +178,9 @@ function calculate(){
     document.getElementById("display").value = result
     document.getElementById("dot").disabled = false
 
+}
+
+
+function reverse(s){
+    return s.split("").reverse().join("");
 }
