@@ -134,6 +134,7 @@ function div(){
     let newValue=oldVlaue+"*"
     document.getElementById("display").value=newValue
     document.getElementById("dot").disabled=false
+    disableOperator()
  } 
 
 //clear button action
